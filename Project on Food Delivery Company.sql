@@ -6,14 +6,14 @@
 	SELECT NAME, REGISTRATION_DATE FROM USER_INFO 
 	WHERE OPERATING_SYSTEM = 'ANDROID';
 
-# Edit your query above to find out users who have registered on or after 14th of july and sort the list of users in ascending order.
+# Find out users who have registered on or after 14th of july and sort the list of users in ascending order.
 
 	SELECT NAME, REGISTRATION_DATE FROM USER_INFO 
 	WHERE CAST(REGISTRATION_DATE AS DATE) >= '2023-07-14'
 
 	ORDER BY REGISTRATION_DATE ASC;
 
-# Retrieve the total number of orders placed by each user. Display the user's name and the total number of orders they have placed. 
+# Retrieve the total number of orders placed by each user. Display the user name and the total number of orders they have placed. 
 # Sort the results in descending order based on the number of orders.
 
 	SELECT U.NAME AS USER_NAME, COUNT(O.USER_ID) AS ORDER_PLACED 
